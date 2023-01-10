@@ -121,6 +121,16 @@ h1 {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: hsl(var(--accent));
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline dotted;
+}
+
 .container {
   margin: 4vmax max(calc((100vw - 70rem) / 2), 1.5rem) 6em;
   display: grid;
