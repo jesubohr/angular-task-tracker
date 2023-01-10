@@ -1,0 +1,17 @@
+<li class="task">
+  <div class="task-group">
+    <input type="checkbox" id="task-{{ task.id }}" class="checkbox" [checked]="task.checked" (change)="toggleCheck()">
+    <label for="task-{{ task.id }}" class="label">
+      {{ task.text }}
+      <span class="checkmark">
+        <ng-icon name="heroCheck" strokeWidth="2" size="24" style="display: grid;"></ng-icon>
+      </span>
+    </label>
+  </div>
+  <div class="task-group">
+    <app-button icon="heroPencilSquare" ariaLabel="Update Task: {{ task.text }}"
+    (onClick)="editTask()"></app-button>
+    <app-button icon="heroTrash" class="delete" ariaLabel="Delete Task: {{ task.text }}"
+    (onClick)="deleteTask()"></app-button>
+  </div>
+</li>
