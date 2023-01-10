@@ -1,0 +1,16 @@
+<form class="todo" (ngSubmit)="handleSubmit()">
+  <div class="wrapper">
+    <input type="text"
+      id="add-task"
+      class="input"
+      name="text"
+      [(ngModel)]="text"
+      maxlength="100"
+      placeholder="Enter a Task"
+      autofocus
+      required
+    >
+    <label for="add-task" class="label">Enter a Task</label>
+  </div>
+  <app-button type="submit" icon="heroPlus" ariaLabel="Add Task"></app-button>
+</form>
