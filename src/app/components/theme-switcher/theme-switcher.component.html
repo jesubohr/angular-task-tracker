@@ -1,0 +1,62 @@
+<aside class="wrapper" [style]="{backgroundColor: (isColorPicking) ? 'hsl(var(--muted) / 0.6)' : 'transparent'}">
+  <ng-container *ngIf="isColorPicking">
+    <app-button icon="heroXMark" class="close" ariaLabel="Close color picking mode"
+      (onClick)="toggleColorPicking()"></app-button>
+    <input type="range" class="picker" aria-label="Color theme slider" min="0" max="360" step="5" value="{{ themeHue }}"
+      (input)="handleColorPicking($event)">
+  </ng-container>
+  <div class="btns" *ngIf="!isColorPicking">
+    <app-button icon="{{ theme === 'light' ? 'heroMoon' : 'heroSun' }}" role="switch" ariaLabel="Change theme to {{ theme === 'light' ? 'dark' : 'light' }} mode" (onClick)="toggleTheme()">
+    </app-button>
+    <app-button icon="heroSwatch" ariaLabel="Enable color picking mode" (onClick)="toggleColorPicking()">
+    </app-button>
+  </div>
+</aside>
+
+<!--
+  <aside className={styles.wrapper} style={{
+      backgroundColor: isColorPicking ? `hsl(var(--muted) / 0.6)` : "transparent"
+  }}>
+    {
+      isColorPicking
+        ? (
+          <>
+            <button
+              className={`btn ${styles.close}`}
+              aria-label="Close color picking mode"
+              onClick={() => setIsColorPicking(false)}
+            >
+              <XMarkIcon />
+            </button>
+            <input
+              type="range"
+              className={styles.picker}
+              aria-label="Color theme slider"
+              min="0"
+              max="360"
+              step={5}
+              value={themeHue}
+              onInput={handleColorPicking}
+            />
+          </>
+        ) : (
+          <div className={styles.btns}>
+            <button
+              className="btn"
+              role="switch"
+              aria-label={`Change theme to ${theme === "light" ? "dark" : "light"} mode`}
+              onClick={toggleTheme}
+            >
+              { theme === "light" ? <MoonIcon /> : <SunIcon /> }
+            </button>
+            <button
+              className="btn"
+              aria-label="Enable color picking mode"
+              onClick={() => setIsColorPicking(true)}>
+              <SwatchIcon />
+            </button>
+          </div>
+        )
+    }
+  </aside>
+-->
