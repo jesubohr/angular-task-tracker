@@ -7,7 +7,7 @@ import { LocalStorageService } from "src/app/services/local-storage.service"
   styleUrls: ['./theme-switcher.component.css']
 })
 export class ThemeSwitcherComponent {
-  isColorPicking: boolean = true
+  isColorPicking: boolean = false
   theme: string = ""
   themeHue: string = ""
 
