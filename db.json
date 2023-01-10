@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "text": "Meeting at School",
+      "date": "Feb 6th at 1:30pm",
+      "checked": false
+    },
+    {
+      "id": 3,
+      "text": "Food Shopping",
+      "date": "Feb 6th at 5:30pm",
+      "checked": false
+    },
+    {
+      "id": 4,
+      "text": "Dinner with Friends",
+      "date": "Feb 10th at 6:30pm",
+      "checked": false
+    }
+  ]
+}
