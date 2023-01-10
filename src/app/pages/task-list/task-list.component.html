@@ -1,0 +1,11 @@
+<app-task-form (onSubmit)="addTask($event)"></app-task-form>
+<ul class="tasks" style="margin-top: 2rem;">
+  <app-task-item
+    *ngFor="let task of tasks"
+    [task]="task"
+    (onCheck)="checkTask(task)"
+    (onEdit)="editTask(task)"
+    (onDelete)="deleteTask(task)"
+  ></app-task-item>
+</ul>
+<app-theme-switcher></app-theme-switcher>
