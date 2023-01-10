@@ -1,0 +1,9 @@
+.supper a {
+  font-size: 0.6em;
+  opacity: 0.25;
+  transition: opacity 0.25s;
+}
+
+.supper a:hover {
+  opacity: 1;
+}
